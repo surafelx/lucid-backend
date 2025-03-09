@@ -5,7 +5,7 @@ from app.models.user_model import User
 from app.core.database import get_db
 from app.controllers.auth import create_access_token, verify_password, get_password_hash as hash_password
 
-router = APIRouter(prefix="/users", tags=["Users"])
+router = APIRouter(prefix="", tags=["Users"])
 
 @router.post("/signup", response_model=UserResponse)
 def signup(user: UserCreate, db: Session = Depends(get_db)):
